@@ -7,8 +7,41 @@ body {
     font-family: 'Nunito Sans', sans-serif;
 }
 
+.body-dark {
+    background-color: #28282B;
+    color: #FFFFF0;
+}
+.btn-google {
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+}
+.result-wrapper {
+    padding: 8px 16px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+}
+.list-inline-item {
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.list-inline-item:hover {
+    text-decoration: underline !important;
+}
+
 .google {
     max-width: 300px;
+}
+
+#more {
+    transition: 0.3s;
+}
+
+#more:hover {
+    background-color: rgb(204, 204, 204);
 }
 
 .main-wrapper {
@@ -30,6 +63,6 @@ body {
     max-width: 584px;
 }
 
-#autoSizingInputGroup {
-    outline: none;
+#searchInput {
+    outline: none !important;
 }
