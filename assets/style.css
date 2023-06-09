@@ -6,3 +6,30 @@ body {
     overflow: hidden;
     font-family: 'Nunito Sans', sans-serif;
 }
+
+.google {
+    max-width: 300px;
+}
+
+.main-wrapper {
+    margin: 0 auto;
+    padding-top: 6px;
+    width: auto;
+    max-width: 584px;
+    position: relative;
+}
+
+.button-input-wrapper {
+    z-index: 3;
+    min-height: 44px;
+    border: 1px solid #5f6368;
+    box-shadow: none;
+    border-radius: 24px;
+    margin: 0 auto;
+    width: auto;
+    max-width: 584px;
+}
+
+#autoSizingInputGroup {
+    outline: none;
+}

@@ -1,8 +1,9 @@
 console.log("Hello");
 let wordsArray = ["apple", "appa", "banana", "cherry", "mango", "orange", "strawberry", "watermelon"];
+let resultBox = document.querySelector('.result-wrapper');
 const wordsArrayCopy = [...wordsArray];
 const input = document.querySelector("input");
-input.addEventListener("keydown", findCloseResults)
+input.addEventListener("keyup", findCloseResults);
 
 function findCloseResults(event) {
     event?.stopPropagation();
@@ -13,8 +14,18 @@ function findCloseResults(event) {
             if (single?.substring(0, search.length) === search) return single;
         })
     }
-    else {
-        return [];
+    while (resultBox?.hasChildNodes()) {
+        resultBox.removeChild(resultBox.firstChild)
     }
     console.log(wordsArray);
+    if (wordsArray?.length > 0) {
+
+        for (let word of wordsArray) {
+            let single = document.createElement('p');
+            single.innerHTML = `<strong>${search}</strong>${word.substring(search.length)}`;
+            resultBox.appendChild(single);
+        }
+        wordsArray = [];
+    }
+
 }
